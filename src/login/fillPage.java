@@ -8,6 +8,7 @@ import login.loginFram;
 import java.text.*;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Scanner;
 /**
  *
  * @author arthe
@@ -42,6 +43,9 @@ public class fillPage extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jtSelect = new javax.swing.JTextField();
         jb_Submit = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        pass = new javax.swing.JCheckBox();
+        troubles = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -81,6 +85,12 @@ public class fillPage extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel1.setText("Investigator's name");
 
+        jtSelect.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtSelectActionPerformed(evt);
+            }
+        });
+
         jb_Submit.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jb_Submit.setText("SUBMIT");
         jb_Submit.addActionListener(new java.awt.event.ActionListener() {
@@ -88,6 +98,40 @@ public class fillPage extends javax.swing.JFrame {
                 jb_SubmitActionPerformed(evt);
             }
         });
+
+        pass.setText("Pass");
+        pass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                passActionPerformed(evt);
+            }
+        });
+
+        troubles.setText("Trouble");
+        troubles.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                troublesActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pass)
+                    .addComponent(troubles))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(pass)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 2, Short.MAX_VALUE)
+                .addComponent(troubles))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -99,10 +143,7 @@ public class fillPage extends javax.swing.JFrame {
                         .addGap(74, 74, 74)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jtRecord, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(113, 113, 113)
-                                .addComponent(jb_Submit, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(jc_Location, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGroup(layout.createSequentialGroup()
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -118,10 +159,14 @@ public class fillPage extends javax.swing.JFrame {
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                 .addComponent(jc_Device, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(jc_Machinenumber, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))))))))
+                                                .addComponent(jc_Machinenumber, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jtSelect, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(135, 135, 135)
-                        .addComponent(jtSelect, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(180, 180, 180)
+                        .addComponent(jb_Submit, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(74, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -145,10 +190,12 @@ public class fillPage extends javax.swing.JFrame {
                     .addComponent(jtMachineNumber)
                     .addComponent(jc_Machinenumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jtSelect, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jtSelect))
+                .addGap(65, 65, 65)
                 .addComponent(jb_Submit, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(99, Short.MAX_VALUE))
+                .addContainerGap(115, Short.MAX_VALUE))
         );
 
         pack();
@@ -190,9 +237,26 @@ public class fillPage extends javax.swing.JFrame {
         // TODO add your handling code here:
         dataPage DP = new dataPage();
         DP.show();//show datapage
-        
         dispose();//close fillpage when datapage show
     }//GEN-LAST:event_jb_SubmitActionPerformed
+
+    private void jtSelectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtSelectActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtSelectActionPerformed
+
+    private void passActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passActionPerformed
+        // TODO add your handling code here:
+        if(pass.isSelected()){
+            troubles.setSelected(false);
+        }
+    }//GEN-LAST:event_passActionPerformed
+
+    private void troublesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_troublesActionPerformed
+        // TODO add your handling code here:
+        if(troubles.isSelected()){
+            pass.setSelected(false);
+        }
+    }//GEN-LAST:event_troublesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -231,6 +295,7 @@ public class fillPage extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField jTF_name;
     private javax.swing.JButton jb_Submit;
     private javax.swing.JComboBox<String> jc_Device;
@@ -241,5 +306,7 @@ public class fillPage extends javax.swing.JFrame {
     private javax.swing.JLabel jtMachineNumber;
     private javax.swing.JLabel jtRecord;
     private javax.swing.JTextField jtSelect;
+    private javax.swing.JCheckBox pass;
+    private javax.swing.JCheckBox troubles;
     // End of variables declaration//GEN-END:variables
 }
