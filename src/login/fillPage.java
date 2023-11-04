@@ -14,10 +14,9 @@ import java.util.Scanner;
  * @author arthe
  */
 public class fillPage extends javax.swing.JFrame {
-
-    /**
-     * Creates new form fillPage
-     */
+    public String th;
+    public String mc;
+    public String mcn;
     public fillPage() {
         initComponents();
         //setExtendedState(MAXIMIZED_BOTH);//setFullscreen
@@ -231,7 +230,41 @@ public class fillPage extends javax.swing.JFrame {
     }//GEN-LAST:event_jc_DeviceActionPerformed
 
     private void jc_LocationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc_LocationActionPerformed
-        // TODO add your handling code here:
+        if(jc_Location.getSelectedItem().equals("Theator1")){
+            jc_Device.removeAllItems();
+            jc_Device.setSelectedItem(null);
+            jc_Device.addItem("Projector");
+            jc_Device.addItem("Air");
+            jc_Device.addItem("Smart Ticket");
+        }
+        else if(jc_Location.getSelectedItem().equals("Theator2")){
+            jc_Device.removeAllItems();
+            jc_Device.setSelectedItem(null);
+            jc_Device.addItem("Projector");
+            jc_Device.addItem("Air");
+            jc_Device.addItem("Smart Ticket");
+        }
+        else if(jc_Location.getSelectedItem().equals("Theator3")){
+            jc_Device.removeAllItems();
+            jc_Device.setSelectedItem(null);
+            jc_Device.addItem("Projector");
+            jc_Device.addItem("Air");
+            jc_Device.addItem("Smart Ticket");
+        }
+        else if(jc_Location.getSelectedItem().equals("Theator4")){
+            jc_Device.removeAllItems();
+            jc_Device.setSelectedItem(null);
+            jc_Device.addItem("Projector");
+            jc_Device.addItem("Air");
+            jc_Device.addItem("Smart Ticket");
+        }
+        else if(jc_Location.getSelectedItem().equals("Theator5")){
+            jc_Device.removeAllItems();
+            jc_Device.setSelectedItem(null);
+            jc_Device.addItem("Projector");
+            jc_Device.addItem("Air");
+            jc_Device.addItem("Smart Ticket");
+        }
     }//GEN-LAST:event_jc_LocationActionPerformed
 
     private void jb_SubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_SubmitActionPerformed
