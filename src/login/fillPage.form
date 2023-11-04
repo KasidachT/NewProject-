@@ -6,7 +6,7 @@
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
-    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="true"/>
   </SyntheticProperties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
@@ -55,7 +55,7 @@
                               <Group type="102" attributes="0">
                                   <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="jtSelect" min="-2" pref="243" max="-2" attributes="0"/>
+                                  <Component id="reportFill" min="-2" pref="243" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -96,7 +96,7 @@
               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Component id="jPanel2" max="32767" attributes="0"/>
-                  <Component id="jtSelect" max="32767" attributes="0"/>
+                  <Component id="reportFill" max="32767" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
               <Component id="jb_Submit" min="-2" pref="60" max="-2" attributes="0"/>
@@ -202,9 +202,9 @@
         <Property name="text" type="java.lang.String" value="Investigator&apos;s name"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jtSelect">
+    <Component class="javax.swing.JTextField" name="reportFill">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtSelectActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="reportFillActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jb_Submit">
@@ -226,8 +226,8 @@
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="pass" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="troubles" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="passCheck" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="troublesCheck" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -237,28 +237,28 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="pass" min="-2" max="-2" attributes="0"/>
+                  <Component id="passCheck" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="2" max="32767" attributes="0"/>
-                  <Component id="troubles" min="-2" max="-2" attributes="0"/>
+                  <Component id="troublesCheck" min="-2" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JCheckBox" name="pass">
+        <Component class="javax.swing.JCheckBox" name="passCheck">
           <Properties>
             <Property name="text" type="java.lang.String" value="Pass"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="passActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="passCheckActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="troubles">
+        <Component class="javax.swing.JCheckBox" name="troublesCheck">
           <Properties>
             <Property name="text" type="java.lang.String" value="Trouble"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="troublesActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="troublesCheckActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

@@ -41,11 +41,11 @@ public class fillPage extends javax.swing.JFrame {
         jc_Location = new javax.swing.JComboBox<>();
         jTF_name = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        jtSelect = new javax.swing.JTextField();
+        reportFill = new javax.swing.JTextField();
         jb_Submit = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
-        pass = new javax.swing.JCheckBox();
-        troubles = new javax.swing.JCheckBox();
+        passCheck = new javax.swing.JCheckBox();
+        troublesCheck = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -85,9 +85,9 @@ public class fillPage extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel1.setText("Investigator's name");
 
-        jtSelect.addActionListener(new java.awt.event.ActionListener() {
+        reportFill.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtSelectActionPerformed(evt);
+                reportFillActionPerformed(evt);
             }
         });
 
@@ -99,17 +99,17 @@ public class fillPage extends javax.swing.JFrame {
             }
         });
 
-        pass.setText("Pass");
-        pass.addActionListener(new java.awt.event.ActionListener() {
+        passCheck.setText("Pass");
+        passCheck.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                passActionPerformed(evt);
+                passCheckActionPerformed(evt);
             }
         });
 
-        troubles.setText("Trouble");
-        troubles.addActionListener(new java.awt.event.ActionListener() {
+        troublesCheck.setText("Trouble");
+        troublesCheck.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                troublesActionPerformed(evt);
+                troublesCheckActionPerformed(evt);
             }
         });
 
@@ -120,17 +120,17 @@ public class fillPage extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pass)
-                    .addComponent(troubles))
+                    .addComponent(passCheck)
+                    .addComponent(troublesCheck))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(pass)
+                .addComponent(passCheck)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 2, Short.MAX_VALUE)
-                .addComponent(troubles))
+                .addComponent(troublesCheck))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -163,7 +163,7 @@ public class fillPage extends javax.swing.JFrame {
                                 .addGroup(layout.createSequentialGroup()
                                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jtSelect, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addComponent(reportFill, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(180, 180, 180)
                         .addComponent(jb_Submit, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -192,13 +192,14 @@ public class fillPage extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jtSelect))
+                    .addComponent(reportFill))
                 .addGap(65, 65, 65)
                 .addComponent(jb_Submit, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(115, Short.MAX_VALUE))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jc_MachinenumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc_MachinenumberActionPerformed
@@ -223,10 +224,10 @@ public class fillPage extends javax.swing.JFrame {
             jc_Machinenumber.addItem("eee");
             jc_Machinenumber.addItem("fff");
         }
-        String selectTheator = jc_Location.getSelectedItem().toString();
-        String selectItem = jc_Device.getSelectedItem().toString();
-        String selectMacineNumber = jc_Machinenumber.getSelectedItem().toString();
-        jtSelect.setText(selectTheator+"\t"+selectItem+"\t"+selectMacineNumber);
+//        String selectTheator = jc_Location.getSelectedItem().toString();
+//        String selectItem = jc_Device.getSelectedItem().toString();
+//        String selectMacineNumber = jc_Machinenumber.getSelectedItem().toString();
+//        jtSelect.setText(selectTheator+"\t"+selectItem+"\t"+selectMacineNumber);
     }//GEN-LAST:event_jc_DeviceActionPerformed
 
     private void jc_LocationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc_LocationActionPerformed
@@ -240,23 +241,23 @@ public class fillPage extends javax.swing.JFrame {
         dispose();//close fillpage when datapage show
     }//GEN-LAST:event_jb_SubmitActionPerformed
 
-    private void jtSelectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtSelectActionPerformed
+    private void reportFillActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reportFillActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jtSelectActionPerformed
+    }//GEN-LAST:event_reportFillActionPerformed
 
-    private void passActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passActionPerformed
-        // TODO add your handling code here:
-        if(pass.isSelected()){
-            troubles.setSelected(false);
-        }
-    }//GEN-LAST:event_passActionPerformed
+    private void passCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passCheckActionPerformed
 
-    private void troublesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_troublesActionPerformed
-        // TODO add your handling code here:
-        if(troubles.isSelected()){
-            pass.setSelected(false);
+        if(passCheck.isSelected()){
+            troublesCheck.setSelected(false);
         }
-    }//GEN-LAST:event_troublesActionPerformed
+    }//GEN-LAST:event_passCheckActionPerformed
+
+    private void troublesCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_troublesCheckActionPerformed
+        // TODO add your handling code here:
+        if(troublesCheck.isSelected()){
+            passCheck.setSelected(false);
+        }
+    }//GEN-LAST:event_troublesCheckActionPerformed
 
     /**
      * @param args the command line arguments
@@ -305,8 +306,8 @@ public class fillPage extends javax.swing.JFrame {
     private javax.swing.JLabel jtLocation;
     private javax.swing.JLabel jtMachineNumber;
     private javax.swing.JLabel jtRecord;
-    private javax.swing.JTextField jtSelect;
-    private javax.swing.JCheckBox pass;
-    private javax.swing.JCheckBox troubles;
+    private javax.swing.JCheckBox passCheck;
+    private javax.swing.JTextField reportFill;
+    private javax.swing.JCheckBox troublesCheck;
     // End of variables declaration//GEN-END:variables
 }
