@@ -45,7 +45,7 @@ public class dataPage extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Inspector", "Date", "Location", "Device", "Machine Serial Number", "report"
+                "Name", "Date", "Location", "Device", "Machine Serial Number", "report"
             }
         ) {
             Class[] types = new Class [] {
